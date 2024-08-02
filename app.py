@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 import pyshorteners
-from pyshorteners.exceptions import BadURLException
+
 
 app = Flask(__name__)
 
