@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short URL</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Short URL</h1>
+        <form name="url_form" id="form_1" method="POST" action="/">
+            <div class="input-link">
+                <input type="url" name="input_link" id="input_link" value="{{link_in}}"  placeholder="Enter the link here">
+                <button id="button">Shorten URL</button>
+            </div>
+
+            <div class="input-section">
+                <input type="url" name="output_link" id="output_link" value="{{link_out}}" placeholder="Your shortened link">
+            </div>
+        </form>        
+    </div>
+
+<script>
+    document.getElementById("button").addEventListener("click", function(event) {
+        var input = document.getElementById("input_link").value;
+        if (input == "") {
+            alert("Please insert your URL");
+            event.preventDefault();
+        }
+    });
+</script>
+</body>
+</html>
