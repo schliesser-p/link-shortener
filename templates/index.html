@@ -33,6 +33,14 @@
     });
     
     document.getElementById("copy-button").addEventListener("click", function(event) {
+        var input = document.getElementById("input_link").value;
+        if (input == "") {
+            alert("Please insert your URL");
+            event.preventDefault();
+        }
+    });
+
+    document.getElementById("copy-button").addEventListener("click", function(event) {
         var copyText = document.getElementById("output_link");
         copyText.select();
         copyText.setSelectionRange(0, 99999);
